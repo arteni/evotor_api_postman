@@ -1,0 +1,1389 @@
+{
+	"info": {
+		"_postman_id": "0b03d4e2-6730-40ba-87af-67f334e33117",
+		"name": "evotor_task_post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "valid_type_is_NORMAL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5801e85c-a3d1-49ec-b398-0e491dbf6392",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_type_is_ALCOHOL_MARKED",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1ca5d76-d44a-43e0-be83-1ec382426b86",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"ALCOHOL_MARKED\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"113769440559896\", \"price\":70478352.6, \"cost_price\":98582036.22, \"quantity\":5226133.59, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":false, \"description\":\"')(*&^%$#@!QWERTYUIOP}{ФЫВАПРОЛДЖЭЁ][zxcvbnm,./йцукенгшщзхъ\", \"alcocodes\": [\"0015932000001190604\"], \"tare_volume\":2, \"alcohol_product_kind_code\":400}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_type_is_ALCOHOL_NOT_MARKED",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "340ac00b-40ca-42a9-8db9-a90a869672d9",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"ALCOHOL_NOT_MARKED\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"64997614950476\", \"price\":84682516.37, \"cost_price\":10456161.55, \"quantity\":7936710.116, \"measure_name\":\"кг\", \"tax\":\"VAT_18\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\", \"tare_volume\":2, \"alcohol_product_kind_code\":400, \"alcohol_by_volume\": 5.45}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_type_is_TOBACCO_MARKED",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "71754b02-cf1a-41c3-9fa0-20a58298563b",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"TOBACCO_MARKED\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"62360081005879\", \"price\":55555626.6, \"cost_price\":26106775.39, \"quantity\":1531326.516, \"measure_name\":\"кг\", \"tax\":\"VAT_0\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_type_is_SHOES_MARKED",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ea9778f-1400-403a-80c3-9a24fab0c5e4",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"SHOES_MARKED\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"2350190506838\", \"price\":2202932.21, \"cost_price\":85538564.75, \"quantity\":5175171.849, \"measure_name\":\"км\", \"tax\":\"NO_VAT\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_type_is_MEDICINE_MARKED",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a4bcb744-525a-448b-9b62-e5292959120d",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"MEDICINE_MARKED\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"26941469513989\", \"price\":88033117.51, \"cost_price\":20939004.50, \"quantity\":1428582.900, \"measure_name\":\"м\", \"tax\":\"VAT_18\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_type_is_SERVICE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2451c56-3e0c-4dbd-b60d-7a0b03457428",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"SERVICE\", \"name\":\"Валидные значения на поле 'type'\", \"code\":\"58137073275437\", \"price\":29245801.99, \"measure_name\":\"кг\", \"tax\":\"VAT_10\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP}{ФЫВАПРОЛДЖЭЁ][zxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_tax_is_NO_VAT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "00aab5b8-fa49-4e8c-b2ea-9a3e566ef882",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'tax'\", \"code\":\"118207062566510\", \"price\":87590815.21, \"cost_price\":81905917.60, \"quantity\":3014821.947, \"measure_name\":\"км\", \"tax\":\"NO_VAT\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_tax_is_VAT_10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1db34bc7-411f-4623-885d-e2336d1c0ee6",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'tax'\", \"code\":\"64242062069322\", \"price\":70072552.2, \"cost_price\":42597467.59, \"quantity\":891642.674, \"measure_name\":\"м\", \"tax\":\"VAT_10\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_tax_is_VAT_18",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8452b92f-579c-4b7c-b997-5dec30469ca9",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'tax'\", \"code\":\"119568650461816\", \"price\":53749957.89, \"cost_price\":12278758.40, \"quantity\":950461.481, \"measure_name\":\"м2\", \"tax\":\"VAT_18\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP}{ФЫВАПРОЛДЖЭЁ][zxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_tax_is_VAT_0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d41b78a-a6cf-4c3f-ba2c-baccab7373f6",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'tax'\", \"code\":\"68340101122342\", \"price\":40147616.48, \"cost_price\":43766910.73, \"quantity\":6636466.804, \"measure_name\":\"л\", \"tax\":\"VAT_0\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_tax_is_VAT_18_118",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "739746a9-d026-4e8b-9d6a-cf54bddda4b4",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'tax'\", \"code\":\"5354243352293\", \"price\":8085135.78, \"cost_price\":9576830.23, \"quantity\":7205680.62, \"measure_name\":\"шт\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_tax_is_VAT_10_110",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d2420f10-e846-4c7e-8459-be63b11ea044",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'tax'\", \"code\":\"62717658561366\", \"price\":71524821.81, \"cost_price\":88168048.36, \"quantity\":1349707.89, \"measure_name\":\"л\", \"tax\":\"VAT_10_110\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP}{ФЫВАПРОЛДЖЭЁ][zxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_allow_to_sell_is_true",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7297573-b40e-4679-855b-fd0316f3be65",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'allow_to_sell'\", \"code\":\"96912501132348\", \"price\":14947155.63, \"cost_price\":14797320.12, \"quantity\":9547638.444, \"measure_name\":\"км\", \"tax\":\"NO_VAT\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valid_allow_to_sell_is_false",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c673cf04-7323-4795-96be-e1979caf5467",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Валидные значения на поле 'allow_to_sell'\", \"code\":\"54194943462323\", \"price\":58094738.43, \"cost_price\":88327935.7, \"quantity\":3100071.159, \"measure_name\":\"шт\", \"tax\":\"VAT_18\", \"allow_to_sell\":false, \"description\":\")(*&^%$#@!QWERTYUIOP}{ФЫВАПРОЛДЖЭЁ][zxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empty_data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "27fc883e-29a9-4074-a9f2-888b62a9b44b",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no_data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8269faa7-dc97-4a19-95ee-39b091bd2d08",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_type_is_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"must be one of [MEDICINE_MARKED, SHOES_MARKED, SERVICE, TOBACCO_MARKED, NORMAL, ALCOHOL_NOT_MARKED, UNKNOWN, ALCOHOL_MARKED]\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"type\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"\", \"name\":\"Пустое поле 'type'\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_name_is_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42f2b9ad-1f25-4085-ba8e-5354b2104add",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\": \"NORMAL\", \"name\":\"\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_name_161_character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"size must be between 0 and 160\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"name\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"name 160 test1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789123456789\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true , \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_price_<8>.<2>_character",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"size must be between 0 and 160\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"name\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"name 160 test1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789123456789\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true , \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_price_is_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"must not be null\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"price\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Пустое price\", \"code\":\"60903352028551\", \"price\":\"\", \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_measure_name_is_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"must not be null\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"measure_name\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Пустое поле measure_name\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_tax_is_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"must be one of [VAT_10, VAT_10_110, VAT_0, NO_VAT, VAT_18, VAT_18_118]\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"tax\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Пустое поле 'tax'\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"\", \"allow_to_sell\":true, \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_allow_to_sell_is_empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f2e3a986-838b-43f2-900c-d86edfa954ac",
+						"exec": [
+							"pm.test(\"Bad POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400]);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"reason\":\"must be one of [true, false]\"');",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include('\"subject\":\"allow_to_sell\"');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/vnd.evotor.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"NORMAL\", \"name\":\"Пустое поле allow_to_sell\", \"code\":\"60903352028551\", \"price\":80976386.72, \"cost_price\":44237256.25, \"quantity\":2610341.248, \"measure_name\":\"л\", \"tax\":\"VAT_18_118\", \"allow_to_sell\":\"\", \"description\":\")(*&^%$#@!QWERTYUIOP{}ФЫВАПРОЛДЖЭЁzxcvbnm,./йцукенгшщзхъ\"}"
+				},
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "x-authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "b3b26179-ccb4-4ade-a533-d9dc9700826b",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d989fdec-3e8c-41c7-9b72-b92f48748cec",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9670764e-4df8-4476-9756-954df834b92c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

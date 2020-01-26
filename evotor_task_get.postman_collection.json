@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "ac1fb0c2-c428-41e3-82eb-d9cdb00fecfa",
+		"name": "evotor_task_get",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_all_in_store",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "513dee5f-f6fa-4fd7-80fb-8d3a8c0efae9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_one_in_store",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a68ce4fd-fa6d-4c7a-b35e-2f784d34ee46",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products/6080ce6d-08b6-44a6-b32b-9f69731340c2",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products",
+						"6080ce6d-08b6-44a6-b32b-9f69731340c2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_one_unreal_in_store",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a68ce4fd-fa6d-4c7a-b35e-2f784d34ee46",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/vnd.evotor.v2+json;charset=UTF-8"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.evotor.ru/stores/20191014-B61E-4026-8062-C72AD0FF63DF/products/6080ce6d-08b6-44a6-b32b-9f69731",
+					"protocol": "https",
+					"host": [
+						"api",
+						"evotor",
+						"ru"
+					],
+					"path": [
+						"stores",
+						"20191014-B61E-4026-8062-C72AD0FF63DF",
+						"products",
+						"6080ce6d-08b6-44a6-b32b-9f69731"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "x-authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "b3b26179-ccb4-4ade-a533-d9dc9700826b",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "23650c27-d27c-4819-b53c-e37257d9c5dc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6de71554-c049-4b0e-8602-c2ca8d34374f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
